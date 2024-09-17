@@ -1,0 +1,125 @@
+h1 {
+	text-align: center;
+	color: #333;
+}
+
+body {
+	background-color: #eee;
+}
+
+.loginContainer {
+	position: absolute;
+	background: white;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: auto;
+	width: 400px;
+	border-radius: 10px;
+	box-shadow: 10px 10px 50px 10px grey;
+}
+
+.loginWrapper {
+	padding: 10%;
+}
+
+.loginButton {
+	width: 100%;
+	height: 40px;
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: 500;
+	border-radius: 5px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	background: #333;
+	margin-top: 20px;
+}
+
+.inputLabel {
+	margin-top: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	display: flex;
+	flex-direction: column;
+}
+
+.inputField {
+	font-size: 16px;
+	border-radius: 2px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	height: 30px;
+	width: 300px;
+	margin-bottom: 10px;
+}
+
+.baseHeader {
+	background-color: white;
+	color: #333;
+	border-style: solid;
+	box-shadow: 10px 20px 15px silver;
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.mainView {
+	background-color: white;
+	color: #333;
+	margin: auto;
+	margin-top: 30px;
+	width: 1100px;
+	border-style: solid;
+	box-shadow: 10px 20px 15px silver;
+	padding-bottom: 10px;
+}
+
+.viewHeader {
+	background-color: #333;
+	color: white;
+	float: top;
+	font-size: 20px;
+	text-align: left;
+	padding: 10px 10px;
+}
+
+.viewTable {
+	margin-top: 10px;
+	display: flex;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.tableHeader {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #e7f2fe;
+}
+
+#viewHistorie td,
+#viewHistorie th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#viewHistorie tr:nth-child(even) {
+	background-color: #ddd;
+}
+
+#viewLeasing {
+	display: flex;
+	overflow: hidden;
+}
+
+#viewVersicherung {
+	display: flex;
+	overflow: hidden;
+}
+
+Test
