@@ -4,7 +4,7 @@ h1 {
 }
 
 body {
-	background-color: #eee;
+	background-color: #fff;
 }
 
 .loginContainer {
@@ -73,7 +73,6 @@ body {
 	width: 1100px;
 	border-style: solid;
 	box-shadow: 10px 20px 15px silver;
-	padding-bottom: 10px;
 }
 
 .viewHeader {
@@ -86,8 +85,8 @@ body {
 }
 
 .viewTable {
-	margin-top: 10px;
 	display: flex;
+	justify-content: space-between;
 }
 
 table {
@@ -95,31 +94,46 @@ table {
 	width: 100%;
 }
 
-.tableHeader {
-	padding-top: 12px;
-	padding-bottom: 12px;
+td, th{
+	border: 1px solid #333;
+	padding: 5px;
+}
+
+tr:nth-child(even){
+	background-color: #eee;
+	}
+
+th {
+	background-color: #bbb;
 	text-align: left;
-	background-color: #e7f2fe;
+	position: sticky;
+	top: 0;
+	z-index: 1;
 }
 
-#viewHistorie td,
-#viewHistorie th {
-	border: 1px solid #ddd;
-	padding: 8px;
+#partnerHeader {
+	float: right;
+	padding-right: 115px;
 }
 
-#viewHistorie tr:nth-child(even) {
-	background-color: #ddd;
+.information {
+	float: left;
 }
 
-#viewLeasing {
-	display: flex;
-	overflow: hidden;
+
+.item {
+	color: #333;
+	font-size: 20px;
+	padding: 10px;
 }
 
-#viewVersicherung {
-	display: flex;
-	overflow: hidden;
+.value {
+	padding-left: 30px;
+	padding-bottom: 10px;
 }
 
-Test
+.table {
+	width: 350px;
+	height: 250px;
+	overflow-y: scroll;
+}

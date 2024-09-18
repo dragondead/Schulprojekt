@@ -6,14 +6,13 @@
 			Sportarten <i class="fa fa-caret-down"></i>
 		</button>
 		<div class="dropdown-content">
-			<a href="">Turnen</a>
-			<a href="">Tanzen</a>
-			<a href="">Gymnastik</a>
-			<a href="">CrossFit</a>
+			<a href="Turnen">Turnen</a>
+			<a href="Tanzen">Tanzen</a>
+			<a href="Gymnastik">Gymnastik</a>
+			<a href="CrossFit">CrossFit</a>
 		</div>
 	</div>
 	<div class="headerRight">		
-		<a href="Konto">Konto</a>
 		<a href="login">Abmelden</a> 
 	</div>
 </div>

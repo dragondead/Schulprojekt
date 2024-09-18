@@ -1,16 +1,3 @@
-@media screen and (max-width: 1400px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-.header {
-	overflow: hidden;
-	background-color: #333;
-}
-
 .headerRight a {
 	display: block;
 	color: white;
