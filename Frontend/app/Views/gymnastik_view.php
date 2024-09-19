@@ -6,49 +6,83 @@
 	<div class="viewTable">
 		<div class="information">
 			<div class="item">Abteilungsleiter:</div>
-			<div>input</div>
+			<div class="value">input</div>
 			<div class="item">Trainingszeiten:</div>
-			<div>input</div>
-			<div class="item">Wochentage:</div>
-			<div>input</div><div>input</div>
+			<div class="value">input</div>
+			<div class="item">Anschrift:</div>
+			<div class="value">input</div>
 		</div>
-		<table class="partner">
-			<tr>
-				<th>Nachname</th>
-				<th>Vorname</th>
-			</tr>
-			<tr>
-				<td>Test</td>
-				<td>Test</td>
-			</tr>
-			<tr>
-				<td>Test</td>
-				<td>Test</td>
-			</tr>
-			<tr>
-				<td>Test</td>
-				<td>Test</td>
-			</tr>
-			<tr>
-				<td>Test</td>
-				<td>Test</td>
-			</tr>
-			<tr>
-				<td>Test</td>
-				<td>Test</td>
-			</tr>
-			<tr>
-				<td>Test</td>
-				<td>Test</td>
-			</tr>
-			<tr>
-				<td>Test</td>
-				<td>Test</td>
-			</tr>
-			<tr>
-				<td>Test</td>
-				<td>Test</td>
-			</tr>
-		</table>
+		<div class="table">
+			<table class="partner">
+				<tr>
+					<th>Nachname</th>
+					<th>Vorname</th>
+				</tr>
+				<tr>
+					<td>Test</td>
+					<td>Test</td>
+				</tr>
+				<tr>
+					<td>Test</td>
+					<td>Test</td>
+				</tr>
+				<tr>
+					<td>Test</td>
+					<td>Test</td>
+				</tr>
+				<tr>
+					<td>Test</td>
+					<td>Test</td>
+				</tr>
+				<tr>
+					<td>Test</td>
+					<td>Test</td>
+				</tr>
+				<tr>
+					<td>Test</td>
+					<td>Test</td>
+				</tr>
+				<tr>
+					<td>Test</td>
+					<td>Test</td>
+				</tr>
+				<tr>
+					<td>Test</td>
+					<td>Test</td>
+				</tr>
+				<tr>
+					<td>Test</td>
+					<td>Test</td>
+				</tr>
+				<tr>
+					<td>Test</td>
+					<td>Test</td>
+				</tr>
+				<tr>
+					<td>Test</td>
+					<td>Test</td>
+				</tr>
+				<tr>
+					<td>Test</td>
+					<td>Test</td>
+				</tr>
+				<tr>
+					<td>Test</td>
+					<td>Test</td>
+				</tr>
+				<tr>
+					<td>Test</td>
+					<td>Test</td>
+				</tr>
+				<tr>
+					<td>Test</td>
+					<td>Test</td>
+				</tr>
+				<tr>
+					<td>Test</td>
+					<td>Test</td>
+				</tr>
+			</table>
+		</div>
 	</div>
 </div>

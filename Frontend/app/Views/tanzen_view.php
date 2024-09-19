@@ -9,7 +9,7 @@
 			<div class="value">input</div>
 			<div class="item">Trainingszeiten:</div>
 			<div class="value">input</div>
-			<div class="item">Wochentage:</div>
+			<div class="item">Anschrift:</div>
 			<div class="value">input</div>
 		</div>
 		<div class="table">

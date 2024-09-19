@@ -9,6 +9,5 @@ class Logout extends BaseController
     {
         $logout = new Login();
         $logout->logout();
-        echo "Hello World";
     }
 }
