@@ -13,11 +13,4 @@ class Login extends Controller
         echo view('login_view');
         echo view('templates/footer');
     }
-
-    public function logout()
-    {
-        echo "Session wurde gelöscht.";
-        return redirect()->to('/login');
-    }
-
 }
