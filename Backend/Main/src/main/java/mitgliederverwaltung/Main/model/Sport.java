@@ -18,8 +18,6 @@ public class Sport {
 
     private String weekDayTwo;
 
-    private String description;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "department_head_id")  // Foreign key to Member table
     private Member departmentHead;
