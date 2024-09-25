@@ -20,18 +20,12 @@ public class WebSecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/", "/home","/member/**").permitAll()
-                        .requestMatchers(HttpMethod.POST,"/member/**").permitAll()
+                        .requestMatchers("/", "/home", "/member/**").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/member/**").permitAll()
                         .anyRequest().authenticated()
                 )
-                .formLogin((form) -> form
-                        .loginPage("/login")
-                        .permitAll()
-                )
-                .csrf(csrf -> csrf
-                        .ignoringRequestMatchers("/member/**") // Disable CSRF for this endpoint
-                )
-                .logout((logout) -> logout.permitAll());
+                .csrf(csrf -> csrf.disable() // Disable CSRF for this endpoint
+                );
 
         return http.build();
     }

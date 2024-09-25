@@ -10,9 +10,6 @@ public class Address {
     private Long id;
 
     @Column(nullable = false)
-    private String email;
-
-    @Column(nullable = false)
     private int houseNumber;
 
     @Column(nullable = false)
@@ -33,14 +30,6 @@ public class Address {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public int getHouseNumber() {

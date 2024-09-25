@@ -23,11 +23,14 @@ public class Member {
     private String surname;
 
     @Column(nullable = false)
+    private String email;
+
+    @Column(nullable = false)
     private Date joinedAt;
 
     private Date exitAt;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "adress_id")
     private Address address;
 
@@ -68,6 +71,14 @@ public class Member {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Date getJoinedAt() {
