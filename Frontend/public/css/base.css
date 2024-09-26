@@ -55,6 +55,11 @@ body {
 	margin-bottom: 10px;
 }
 
+.viewEditMember {
+	width: 1100px;
+	padding: 20px;
+}
+
 .baseHeader {
 	background-color: white;
 	color: #333;
@@ -63,6 +68,18 @@ body {
 	font-size: 20px;
 	margin-top: 10px;
 	margin-bottom: 20px;
+}
+
+#checkBoxBorder {
+	border: none;
+	padding: 5px;
+}
+
+#deleteCheckbox {
+	transform: scale(1.5);
+	accent-color: red;
+	display: none;
+	padding: 5px;
 }
 
 .mainView {
@@ -89,6 +106,41 @@ body {
 	justify-content: space-between;
 }
 
+.memberButton {
+	color: white;
+	background-color: #333;
+	border-radius: 5px;
+	font-size: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.memberButton:hover {
+	background-color: #111;
+}
+
+#addMemberLine {
+	display: none;
+}
+
+#save {
+	display: none;
+}
+
+#cancelMember {
+	display: none;
+	float: right;
+	margin-right: 50px;
+}
+
+.addMember {
+	width: 138px;
+}
+
+.changeMember {
+	width: 138px;
+}
+
 table {
 	border-collapse: collapse;
 	width: 100%;
@@ -97,6 +149,7 @@ table {
 td, th{
 	border: 1px solid #333;
 	padding: 5px;
+	width: 138px;
 }
 
 tr:nth-child(even){
@@ -136,4 +189,30 @@ th {
 	width: 350px;
 	height: 250px;
 	overflow-y: scroll;
+}
+
+#cancel {
+	display: none;
+}
+
+.sportsButton {
+	margin-top: 40%;
+	margin-left: 30px;
+	background-color: #333;
+	color: white;
+	padding: 5px;
+	font-size: 20px;
+	border-radius: 5px;
+}
+
+.sportsButton:hover {
+	background-color: #111;
+}
+
+#addSportsmanLine {
+	display: none;
+}
+
+.inputSportsman {
+	width: 90%;
 }

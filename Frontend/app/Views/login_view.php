@@ -1,6 +1,6 @@
 <div class="loginContainer">
 	<div class="loginWrapper">
-		<h1>Fuhrparkmanagement-System</h1>
+		<h1>Mitglieder und Sportartenverwaltung</h1>
 
 		<div class="formLogin"> 
 			<form action="/home" method="post">
