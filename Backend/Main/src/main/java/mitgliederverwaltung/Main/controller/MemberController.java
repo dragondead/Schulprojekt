@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @org.springframework.web.bind.annotation.RestController
-@RequestMapping("/member")
+@RequestMapping("/v1/member")
 public class MemberController {
 
     @Autowired
@@ -42,7 +42,6 @@ public class MemberController {
     }
 
     @PutMapping(value = "/{id}")
-    @ResponseStatus(HttpStatus.OK)
     public HttpStatus update(@PathVariable( "id" ) Long id, @RequestBody Member member) {
         if (member == null ) {
             return HttpStatus.BAD_REQUEST;

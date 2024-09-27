@@ -1,5 +1,6 @@
 package mitgliederverwaltung.Main.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -35,7 +36,8 @@ public class Member {
     private Address address;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    @JoinTable(name = "member_sports", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+    @JoinTable(name = "member_sports", joinColumns = @JoinColumn(name = "member_id"), inverseJoinColumns = @JoinColumn(name = "sport_id"))
+    @JsonIgnore
     private Set<Sport> sports = new HashSet<>();
 
     public Member() {
@@ -112,4 +114,15 @@ public class Member {
     public void setSports(Set<Sport> sports) {
         this.sports = sports;
     }
+
+    public void addSport(Sport sport){
+        sports.add(sport);
+        sport.getMembers().add(this);
+    }
+
+    public void removeSport(Sport sport){
+        sports.remove(sport);
+        sport.getMembers().remove(this);
+    }
+
 }

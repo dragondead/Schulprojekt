@@ -1,29 +1,18 @@
-package mitgliederverwaltung.Main.model;
+package mitgliederverwaltung.Main.model.dto;
 
 import jakarta.persistence.*;
+import mitgliederverwaltung.Main.model.Member;
 
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity
-@Table(name = "sports")
-public class Sport {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class SportDTO {
     private Long id;
-
     private String name;
-
     private String weekDayOne;
-
     private String weekDayTwo;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "department_head_id")
-    private Member departmentHead;
-
-    @ManyToMany(mappedBy = "sports", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    private Set<Member> members = new HashSet<Member>();
+    private Long departmentHead;
+    private Set<Long> members = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -57,31 +46,19 @@ public class Sport {
         this.weekDayTwo = weekDayTwo;
     }
 
-    public Member getDepartmentHead() {
+    public Long getDepartmentHead() {
         return departmentHead;
     }
 
-    public void setDepartmentHead(Member departmentHead) {
+    public void setDepartmentHead(Long departmentHead) {
         this.departmentHead = departmentHead;
     }
 
-    public Set<Member> getMembers() {
+    public Set<Long> getMembers() {
         return members;
     }
 
-    public void setMembers(Set<Member> members) {
+    public void setMembers(Set<Long> members) {
         this.members = members;
     }
-
-    public void addMember(Member member) {
-        members.add(member);
-        member.getSports().add(this);
-    }
-
-    public void removeMember(Member member) {
-        members.remove(member);
-        member.getSports().remove(this);
-    }
-
-
 }
