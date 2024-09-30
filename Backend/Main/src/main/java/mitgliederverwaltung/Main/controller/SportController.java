@@ -1,16 +1,22 @@
 package mitgliederverwaltung.Main.controller;
 
+import com.fasterxml.jackson.annotation.JsonView;
 import io.swagger.v3.oas.annotations.Operation;
 import mitgliederverwaltung.Main.model.Member;
 import mitgliederverwaltung.Main.model.Sport;
+import mitgliederverwaltung.Main.model.dto.MemberDTO;
+import mitgliederverwaltung.Main.model.dto.SportDTO;
 import mitgliederverwaltung.Main.repository.MemberRepository;
 import mitgliederverwaltung.Main.repository.SportRepository;
+import mitgliederverwaltung.Main.util.DtoConverter;
+import mitgliederverwaltung.Main.util.Views;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/v1/sport")
@@ -24,14 +30,28 @@ public class SportController {
 
     @Operation(summary = "Get all sports", description = "Gets all sports that are  in Table 'Sports'")
     @GetMapping
-    public List<Sport> findAll() {
-        return sportRepository.findAll();
+    public List<SportDTO> findAll() {
+        List<Sport> sports = sportRepository.findAll();
+
+        return sports.stream().map(DtoConverter::convertSport).collect(Collectors.toList());
+
     }
 
     @Operation(summary = "Get sport by ID", description = "Retrieves a sport by its ID")
     @GetMapping(value = "/{id}")
-    public Optional<Sport> findById(@PathVariable("id") Long id) {
-        return sportRepository.findById(id);
+    public SportDTO findById(@PathVariable("id") Long id) {
+        return DtoConverter.convertSport(sportRepository.findById(id).get());
+    }
+
+    @Operation(summary = "Get members of a sport", description = "Retrieves the members by the sport ID")
+    @GetMapping(value = "/{id}/member")
+    @JsonView(Views.FullNameMember.class)
+    public List<MemberDTO> getSportMember(@PathVariable("id") Long id) {
+
+        List<Member> members = sportRepository.findById(id).get().getMembers();
+
+        return members.stream().map(DtoConverter::convertMember).collect(Collectors.toList());
+
     }
 
     @Operation(summary = "Creates a new sport", description = "Provide {\n" +
@@ -41,7 +61,7 @@ public class SportController {
             "}")
     @PostMapping
     public HttpStatus create(@RequestBody Sport resource) {
-        if (resource == null ) {
+        if (resource == null) {
             return HttpStatus.BAD_REQUEST;
         }
 
@@ -80,8 +100,8 @@ public class SportController {
 
     @Operation(summary = "Update a sport", description = "Updates the sport with the given id")
     @PutMapping(value = "/{id}")
-    public HttpStatus update(@PathVariable( "id" ) Long id, @RequestBody Sport sport) {
-        if (sport == null ) {
+    public HttpStatus update(@PathVariable("id") Long id, @RequestBody Sport sport) {
+        if (sport == null) {
             return HttpStatus.BAD_REQUEST;
         }
         sport.setId(id);
@@ -96,4 +116,7 @@ public class SportController {
     public void delete(@PathVariable("id") Long id) {
         sportRepository.deleteById(id);
     }
+
+
+
 }

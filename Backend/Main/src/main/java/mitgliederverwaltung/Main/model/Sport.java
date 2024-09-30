@@ -2,7 +2,9 @@ package mitgliederverwaltung.Main.model;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -23,7 +25,7 @@ public class Sport {
     private Member departmentHead;
 
     @ManyToMany(mappedBy = "sports", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    private Set<Member> members = new HashSet<Member>();
+    private List<Member> members = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -65,11 +67,11 @@ public class Sport {
         this.departmentHead = departmentHead;
     }
 
-    public Set<Member> getMembers() {
+    public List<Member> getMembers() {
         return members;
     }
 
-    public void setMembers(Set<Member> members) {
+    public void setMembers(List<Member> members) {
         this.members = members;
     }
 

@@ -3,7 +3,9 @@ package mitgliederverwaltung.Main.model.dto;
 import jakarta.persistence.*;
 import mitgliederverwaltung.Main.model.Member;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class SportDTO {
@@ -12,7 +14,7 @@ public class SportDTO {
     private String weekDayOne;
     private String weekDayTwo;
     private Long departmentHead;
-    private Set<Long> members = new HashSet<>();
+    private List<Long> members = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -54,11 +56,11 @@ public class SportDTO {
         this.departmentHead = departmentHead;
     }
 
-    public Set<Long> getMembers() {
+    public List<Long> getMembers() {
         return members;
     }
 
-    public void setMembers(Set<Long> members) {
+    public void setMembers(List<Long> members) {
         this.members = members;
     }
 }
