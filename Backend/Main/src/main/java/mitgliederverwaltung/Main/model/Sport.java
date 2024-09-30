@@ -1,5 +1,6 @@
 package mitgliederverwaltung.Main.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -25,6 +26,7 @@ public class Sport {
     private Member departmentHead;
 
     @ManyToMany(mappedBy = "sports", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    @JsonIgnore
     private List<Member> members = new ArrayList<>();
 
     public Long getId() {

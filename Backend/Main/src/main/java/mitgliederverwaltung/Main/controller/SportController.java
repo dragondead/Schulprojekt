@@ -39,8 +39,8 @@ public class SportController {
 
     @Operation(summary = "Get sport by ID", description = "Retrieves a sport by its ID")
     @GetMapping(value = "/{id}")
-    public SportDTO findById(@PathVariable("id") Long id) {
-        return DtoConverter.convertSport(sportRepository.findById(id).get());
+    public Sport findById(@PathVariable("id") Long id) {
+        return sportRepository.findById(id).get();
     }
 
     @Operation(summary = "Get members of a sport", description = "Retrieves the members by the sport ID")
@@ -72,30 +72,30 @@ public class SportController {
 
     @Operation(summary = "Add a Member to sport id", description = "Adds a given member (queryparameter) to the sport.")
     @PostMapping(value = "/{id}/member")
-    public HttpStatus addMembers(@PathVariable("id") Long id, @RequestParam Long memberId) {
+    public HttpStatus addMembers(@PathVariable("id") Long sportsId, @RequestParam Long id) {
 
-        Optional<Sport> sport = sportRepository.findById(id);
-        Optional<Member> member = memberRepository.findById(memberId);
+        Optional<Sport> sport = sportRepository.findById(sportsId);
+        Optional<Member> member = memberRepository.findById(id);
 
         sport.get().addMember(member.get());
 
         sportRepository.save(sport.get());
 
-        return HttpStatus.CREATED;
+        return HttpStatus.OK;
     }
 
     @Operation(summary = "Remove a Member from sport id", description = "Removes a given member (queryparameter) from the sport.")
     @DeleteMapping(value = "/{id}/member")
-    public HttpStatus removeMembers(@PathVariable("id") Long id, @RequestParam Long memberId) {
+    public HttpStatus removeMembers(@PathVariable("id") Long sportsId, @RequestParam Long id) {
 
-        Optional<Sport> sport = sportRepository.findById(id);
-        Optional<Member> member = memberRepository.findById(memberId);
+        Optional<Sport> sport = sportRepository.findById(sportsId);
+        Optional<Member> member = memberRepository.findById(id);
 
         sport.get().removeMember(member.get());
 
         sportRepository.save(sport.get());
 
-        return HttpStatus.CREATED;
+        return HttpStatus.OK;
     }
 
     @Operation(summary = "Update a sport", description = "Updates the sport with the given id")
