@@ -56,7 +56,6 @@ body {
 }
 
 .viewEditMember {
-	width: 1100px;
 	padding: 20px;
 }
 
@@ -70,16 +69,16 @@ body {
 	margin-bottom: 20px;
 }
 
-#checkBoxBorder {
-	border: none;
-	padding: 5px;
-}
-
-#deleteCheckbox {
+.checkBox {
 	transform: scale(1.5);
 	accent-color: red;
+}
+
+.checkBoxBorder {
+	border: 1px solid #333;
 	display: none;
-	padding: 5px;
+	background-color: #333;
+	position: absolute;
 }
 
 .mainView {
@@ -119,11 +118,23 @@ body {
 	background-color: #111;
 }
 
+.addMember {
+	width: 95%;
+}
+
 #addMemberLine {
 	display: none;
 }
 
 #save {
+	display: none;
+}
+
+#deleteMember {
+	display: none;
+}
+
+#addMember {
 	display: none;
 }
 
@@ -133,12 +144,32 @@ body {
 	margin-right: 50px;
 }
 
-.addMember {
-	width: 138px;
+#members {
+	float: right;
 }
 
 .changeMember {
-	width: 138px;
+	width: 95%;
+}
+
+#name {
+	width: 150px;
+}
+
+#surname {
+	width: 150px;
+}
+
+#address {
+	width: 300px;
+}
+
+#fee {
+	width: 50px;
+}
+
+#joinedAt, #exitAt {
+	width: 100px;
 }
 
 table {
@@ -149,7 +180,6 @@ table {
 td, th{
 	border: 1px solid #333;
 	padding: 5px;
-	width: 138px;
 }
 
 tr:nth-child(even){
