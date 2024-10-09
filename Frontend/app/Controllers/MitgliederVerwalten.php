@@ -104,7 +104,6 @@ class MitgliederVerwalten extends BaseController
 		$addressHouse = explode(" ", $addressArray1[1]);
 		
 		$addressArray2 = array(
-			//'id' => 0,
 			'houseNumber' => $addressHouse[1],
 			'street' => $addressHouse[0],
 			'city' => $addressCity[1],
@@ -112,12 +111,10 @@ class MitgliederVerwalten extends BaseController
 		);
 		
 		$userJSON = array(
-			//'id' => 0,
 			'fee' => $fee,
 			'name' => $firstname,
 			'surname' => $lastname,
 			'email' => $email,
-			//'joinedAt' => "2024-10-02T11:34:56.274Z",
 			'joinedAt' => date("Y-m-d\TH:i:s.v\Z"),
 			'exitAt' => "",
 			'address' => $addressArray2
@@ -189,7 +186,7 @@ class MitgliederVerwalten extends BaseController
 						
 			$addressArray2 = array(
 				'id' => $addressID['id'],
-				'houseNumber' => $addressHouse[1],
+				'houseNumber' => (int)$addressHouse[1],
 				'street' => $addressHouse[0],
 				'city' => $addressCity[1],
 				'zip' => $addressCity[0]
@@ -211,17 +208,12 @@ class MitgliederVerwalten extends BaseController
 			
 			$myJson = json_encode($userJSON, JSON_UNESCAPED_UNICODE);
 		
-			print_r($myJson);
-			print_r($userArray);
-			
-			/*
-			if($myJson == $userArray){
-				print_r ("true");
-			} else {
-				print_r("false");
-			}*/
-			
+			if($myJson != $userArray){
+				$this->putUserByID($myJson, $userID[$x]);
+			}			
 		}
+		
+		return redirect()->to('/MitgliederVerwalten');
 		
 	}
 	
@@ -252,12 +244,13 @@ class MitgliederVerwalten extends BaseController
 	function putUserByID($userJSON, $userID) {
 		
 		$putURL = "http://schule.tequu.ovh:52050/v1/member/" . $userID;
-		$headers = ['x-secret: bihekbnrlkar4324bbdejfjm2'];
+		$headers = ['x-secret: bihekbnrlkar4324bbdejfjm2', 'Content-Type: application/json', 'Content-Length: ' . strlen($userJSON)];
 		
 		$put = curl_init();
 		curl_setopt($put, CURLOPT_CUSTOMREQUEST, "PUT");
 		curl_setopt($put, CURLOPT_URL, $putURL);
-		curl_setopt($put, CURLOPT_HTTPHEADER, $headers.strlen($userJSON));
+		curl_setopt($put, CURLOPT_HTTPHEADER,$headers);
+		curl_setopt($put, CURLOPT_POSTFIELDS,$userJSON);
 		curl_setopt($put, CURLOPT_RETURNTRANSFER, true);
 		
 		$response = curl_exec($put);
