@@ -3,9 +3,7 @@
 	<head>  	
 		<meta http-equiv="content-type" content="text/html; charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!--
-		<link rel="icon" href="/img/favicon.png" type="image/gif">
-		-->
+
 		<link href="/css/base.css" type="text/css" rel="stylesheet">
 		<link href="/css/messageBox.css" type="text/css" rel="stylesheet">
 		<link href="/css/navigation.css" type="text/css" rel="stylesheet">

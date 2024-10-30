@@ -79,7 +79,10 @@ class ServerInfo
         }
     }
 
-
+    public static function getMysqlSessionUserId(){
+        $mySqlSessionUserId = 'SET @WEBUSERID=' . session()->get('u_id');
+        return $mySqlSessionUserId;
+    }
 
 }
    

@@ -24,8 +24,7 @@ class Filters extends BaseConfig
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
-        'secureheaders' => SecureHeaders::class,
-        'authGuard'     => AuthGuard::class,
+        'secureheaders' => SecureHeaders::class
     ];
 
     /**
@@ -36,7 +35,6 @@ class Filters extends BaseConfig
      */
     public array $globals = [
         'before' => [
-            'authGuard' => ['except' =>  ['login', 'login/loginAuth']],
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
