@@ -44,7 +44,6 @@ class MitgliederVerwalten extends BaseController
 		
 		$jsonArray = json_decode($json, true);
 				
-		$count = 0;
 		$users = array();
 		foreach ($jsonArray as $element){
 			$user = [
@@ -58,7 +57,6 @@ class MitgliederVerwalten extends BaseController
 			];
 			array_push($users, $user);
 			
-			$count += 1;
 		}
 		return $users;
 	}

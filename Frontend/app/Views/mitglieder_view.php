@@ -70,8 +70,8 @@
 					echo "<td><input class='changeMember' name='surname[]' id='surname" . $user['id'] . "'type='text' value='" . $user['surname'] . "'  disabled></td>";
 					echo "<td><input class='changeMember' name='name[]' id='name" . $user['id'] . "' type='text' value='" . $user['name'] . "'  disabled></td>";
 					echo "<td><input class='changeMember' name='nameEmail[]' id='email" . $user['id'] . "' type='text' value='" . $user['email'] . "'  disabled></td>";
-					echo "<td><input class='changeMember' name='nameFee[]' id='fee" . $user['id'] . "' type='text' value='" . $user['fee'] . "'  disabled></td>";
 					echo "<td><input class='changeMember' name='nameAddress[]' id='address" . $user['id'] . "' type='text' value='" . $stringAddress . "'  disabled></td>";
+					echo "<td><input class='changeMember' name='nameFee[]' id='fee" . $user['id'] . "' type='text' value='" . $user['fee'] . "'  disabled></td>";
 					echo "<td><input class='changeMember' name='joinedAt[]' id='joinedAt" . $user['id'] . "' type='text' value='" . date('Y-m-d', strtotime($user['joinedAt'])) . "'  disabled></td>";
 					echo "<td><input class='changeMember' name='exitAt[]' id='exitAt" . $user['id'] . "' type='text' value='" . $exitDate . "'  disabled></td>";
 					echo "<td class='checkBoxBorder'><input class='checkBox' id='deleteCheckbox" . $user['id'] . "' type='checkbox' name='deleteCheckBox[]' value=" . $user['id'] . "></td>";
