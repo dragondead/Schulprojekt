@@ -1,0 +1,18 @@
+# curl -X 'GET'
+#  'http://schule.tequu.ovh:52050/v1/member'
+#  -H 'accept: */*'
+GET http://localhost:52050/v1/member
+accept: */*
+x-secret: bihekbnrlkar4324bbdejfjm2
+
+###
+
+# curl -X 'DELETE'
+#  'http://schule.tequu.ovh:52050/v1/member/1'
+#  -H 'accept: */*'
+DELETE http://localhost:52050/v1/member/4
+accept: */*
+x-secret: bihekbnrlkar4324bbdejfjm2
+
+###
+

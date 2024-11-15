@@ -1,0 +1,6 @@
+{
+  "timestamp": "2024-11-05T09:31:20.539+00:00",
+  "status": 403,
+  "error": "Forbidden",
+  "path": "/v1/member"
+}

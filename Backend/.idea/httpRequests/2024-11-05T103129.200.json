@@ -1,0 +1,98 @@
+[
+  {
+    "id": 8,
+    "fee": 100,
+    "name": "Alt",
+    "surname": "User",
+    "email": "test2@mail.com",
+    "joinedAt": "2024-10-02",
+    "exitAt": null,
+    "address": {
+      "id": 5,
+      "houseNumber": 5,
+      "street": "weg",
+      "city": "AllesGut",
+      "zip": "77584"
+    }
+  },
+  {
+    "id": 9,
+    "fee": 100,
+    "name": "Vor",
+    "surname": "Nach",
+    "email": "test@mail.com",
+    "joinedAt": "2024-10-02",
+    "exitAt": null,
+    "address": {
+      "id": 7,
+      "houseNumber": 5,
+      "street": "Strasse",
+      "city": "Hausen",
+      "zip": "2345"
+    }
+  },
+  {
+    "id": 10,
+    "fee": 100,
+    "name": "Test",
+    "surname": "Tester1",
+    "email": "test3@mail.com",
+    "joinedAt": "2024-10-07",
+    "exitAt": null,
+    "address": {
+      "id": 8,
+      "houseNumber": 4,
+      "street": "Straße",
+      "city": "Hausen",
+      "zip": "2345"
+    }
+  },
+  {
+    "id": 2,
+    "fee": 100,
+    "name": "Tester",
+    "surname": "Tester3",
+    "email": "test3@testmail.com",
+    "joinedAt": "2042-12-11",
+    "exitAt": null,
+    "address": {
+      "id": 2,
+      "houseNumber": 1,
+      "street": "Teststr.",
+      "city": "Testhausen",
+      "zip": "12345"
+    }
+  },
+  {
+    "id": 3,
+    "fee": 100,
+    "name": "TestTest",
+    "surname": "Tester3",
+    "email": "testina@testmail.com",
+    "joinedAt": "2024-12-11",
+    "exitAt": null,
+    "address": {
+      "id": 2,
+      "houseNumber": 1,
+      "street": "Teststr.",
+      "city": "Testhausen",
+      "zip": "12345"
+    }
+  },
+  {
+    "id": 6,
+    "fee": 100,
+    "name": "New",
+    "surname": "User",
+    "email": "test3@testmail.com",
+    "joinedAt": "2042-12-11",
+    "exitAt": null,
+    "address": {
+      "id": 5,
+      "houseNumber": 5,
+      "street": "weg",
+      "city": "AllesGut",
+      "zip": "77584"
+    }
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": 2,
+    "fee": 100,
+    "name": "Testina",
+    "surname": "Tester3",
+    "email": "testina@testmail.com",
+    "joinedAt": "2042-12-12",
+    "exitAt": null,
+    "address": {
+      "id": 1,
+      "houseNumber": 1,
+      "street": "Teststr.",
+      "city": "Testhausen",
+      "zip": "12345"
+    }
+  },
+  {
+    "id": 3,
+    "fee": 100,
+    "name": "Tester",
+    "surname": "Test",
+    "email": "tester.test@testmail.com",
+    "joinedAt": "2042-12-12",
+    "exitAt": null,
+    "address": {
+      "id": 2,
+      "houseNumber": 3,
+      "street": "Teststr.",
+      "city": "Testhausen",
+      "zip": "12345"
+    }
+  },
+  {
+    "id": 4,
+    "fee": 100,
+    "name": "Neuer",
+    "surname": "User",
+    "email": "test3@testmail.com",
+    "joinedAt": "2042-12-12",
+    "exitAt": null,
+    "address": {
+      "id": 3,
+      "houseNumber": 5,
+      "street": "weg",
+      "city": "AllesGut",
+      "zip": "77584"
+    }
+  },
+  {
+    "id": 1,
+    "fee": 100,
+    "name": "Test",
+    "surname": "Tester3",
+    "email": "test3@testmail.com",
+    "joinedAt": "2024-12-12",
+    "exitAt": null,
+    "address": {
+      "id": 1,
+      "houseNumber": 1,
+      "street": "Teststr.",
+      "city": "Testhausen",
+      "zip": "12345"
+    }
+  },
+  {
+    "id": 5,
+    "fee": 100,
+    "name": "Neuer",
+    "surname": "User2",
+    "email": "test3@testmail.com",
+    "joinedAt": "2024-10-08",
+    "exitAt": null,
+    "address": {
+      "id": 3,
+      "houseNumber": 5,
+      "street": "weg",
+      "city": "AllesGut",
+      "zip": "77584"
+    }
+  }
+]
