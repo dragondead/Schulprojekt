@@ -65,9 +65,12 @@
 						}
 						$count += 1;
 					}
+					
 					echo "<tr>";
 					echo "<td hidden><input name='hiddenID[]' value=" . $user['id'] . "></td>";
-					echo "<td><input class='changeMember' name='surname[]' id='surname" . $user['id'] . "'type='text' value='" . $user['surname'] . "'  disabled></td>";
+					echo "<td><input class='changeMember' name='surname[]' id='surname" . $user['id'] . "'
+							type='text' value='" . $user['surname'] . "'  disabled></td>";
+					
 					echo "<td><input class='changeMember' name='name[]' id='name" . $user['id'] . "' type='text' value='" . $user['name'] . "'  disabled></td>";
 					echo "<td><input class='changeMember' name='nameEmail[]' id='email" . $user['id'] . "' type='text' value='" . $user['email'] . "'  disabled></td>";
 					echo "<td><input class='changeMember' name='nameAddress[]' id='address" . $user['id'] . "' type='text' value='" . $stringAddress . "'  disabled></td>";
@@ -87,15 +90,11 @@
 	
 	function addMemberToDatabase() {
 		
-		
 		const input = document.querySelectorAll(".addMember");
 			input.forEach(input => input.value = "");
 	}
 	
 	function addMemberFunction() {
-		console.log(1);
-		const element = document.getElementById("cancelMember");
-		const style = window.getComputedStyle(element);
 		
 		document.getElementById("addMemberLine").style.display = "table-row";
 		document.getElementById("cancelMember").style.display = "initial";

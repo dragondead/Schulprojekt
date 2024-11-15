@@ -14,11 +14,7 @@ class Login extends Controller
             'url',
             'form'
         ]);
-
-        $session = session();
-
-        $session->set('htmlTitle', 'FPMS - Login');
-    }
+		}
 
     public function index()
     {

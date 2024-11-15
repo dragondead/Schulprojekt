@@ -21,9 +21,7 @@ class MitgliederVerwalten extends BaseController
 		
     }
 	
-	public function getUser()
-	{
-		
+	private function getUser() {
 		$url = "http://schule.tequu.ovh:52050/v1/member";
 		$headers = ['x-secret: bihekbnrlkar4324bbdejfjm2'];
 		
@@ -33,15 +31,6 @@ class MitgliederVerwalten extends BaseController
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		$json = curl_exec($ch);
 
-		if (curl_error($ch)) {
-		  echo "curl Fehler: " . curl_error($ch);
-		} else if ($json === "") {
-		  echo "Das JSON ist leer";
-		} else {
-		  // Verarbeite die JSON-Daten (z.B. mit json_decode)
-		  //echo "Erfolgreich Daten erhalten";
-		}
-		
 		$jsonArray = json_decode($json, true);
 				
 		$users = array();
@@ -56,12 +45,11 @@ class MitgliederVerwalten extends BaseController
 				"exitAt" => $element["exitAt"],
 			];
 			array_push($users, $user);
-			
 		}
 		return $users;
 	}
 	
-	function getAddress() {
+	private function getAddress() {
 		$url = "http://schule.tequu.ovh:52050/v1/member";
 		$headers = ['x-secret: bihekbnrlkar4324bbdejfjm2'];
 		
@@ -157,12 +145,13 @@ class MitgliederVerwalten extends BaseController
 			curl_setopt($delete, CURLOPT_RETURNTRANSFER, true);
 			
 			$response = curl_exec($delete);
-			echo $response;
+			
 		}
+		return redirect()->to('/MitgliederVerwalten');
 	}
 	
 	public function putUser() {
-
+		
 		$userID = $this->request->getVar('hiddenID');
 		$name = $this->request->getVar('name');
 		$surname = $this->request->getVar('surname');
@@ -215,7 +204,7 @@ class MitgliederVerwalten extends BaseController
 		
 	}
 	
-	public function getUserByID($ID){
+	private function getUserByID($ID){
 		
 		$url = "http://schule.tequu.ovh:52050/v1/member/" . $ID;
 		$headers = ['x-secret: bihekbnrlkar4324bbdejfjm2'];
@@ -239,7 +228,7 @@ class MitgliederVerwalten extends BaseController
 		return $json;
 	}
 	
-	function putUserByID($userJSON, $userID) {
+	private function putUserByID($userJSON, $userID) {
 		
 		$putURL = "http://schule.tequu.ovh:52050/v1/member/" . $userID;
 		$headers = ['x-secret: bihekbnrlkar4324bbdejfjm2', 'Content-Type: application/json', 'Content-Length: ' . strlen($userJSON)];
