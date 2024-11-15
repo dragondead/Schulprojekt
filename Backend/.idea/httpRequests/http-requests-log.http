@@ -1,0 +1,104 @@
+DELETE http://localhost:52050/v1/member/4
+accept: */*
+x-secret: bihekbnrlkar4324bbdejfjm2
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+###
+
+GET http://localhost:52050/v1/member
+accept: */*
+x-secret: bihekbnrlkar4324bbdejfjm2
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+<> 2024-11-05T103953.200.json
+
+###
+
+DELETE http://localhost:52050/v1/member/1
+accept: */*
+x-secret: bihekbnrlkar4324bbdejfjm2
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+###
+
+DELETE http://localhost:52050/v1/member/1
+accept: */*
+x-secret: bihekbnrlkar4324bbdejfjm2
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+<> 2024-11-05T103453.500.json
+
+###
+
+GET http://localhost:52050/v1/member
+accept: */*
+x-secret: bihekbnrlkar4324bbdejfjm2
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+<> 2024-11-05T103439.200.json
+
+###
+
+DELETE http://schule.tequu.ovh:52050/v1/member/6
+accept: */*
+x-secret: bihekbnrlkar4324bbdejfjm2
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Cookie: JSESSIONID=A68CB1142CEA763D2FB615F8FE3D5372
+content-length: 0
+
+<> 2024-11-05T103217.500.json
+
+###
+
+DELETE http://schule.tequu.ovh:52050/v1/member/1
+accept: */*
+x-secret: bihekbnrlkar4324bbdejfjm2
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Cookie: JSESSIONID=A68CB1142CEA763D2FB615F8FE3D5372
+content-length: 0
+
+###
+
+GET http://schule.tequu.ovh:52050/v1/member
+accept: */*
+x-secret: bihekbnrlkar4324bbdejfjm2
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Cookie: JSESSIONID=A68CB1142CEA763D2FB615F8FE3D5372
+content-length: 0
+
+<> 2024-11-05T103129.200.json
+
+###
+
+GET http://schule.tequu.ovh:52050/v1/member
+accept: */*
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+<> 2024-11-05T103120.403.json
+
+###
+
+DELETE http://schule.tequu.ovh:52050/v1/member/1
+accept: */*
+x-secret: bihekbnrlkar4324bbdejfjm2
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+###
+

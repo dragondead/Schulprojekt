@@ -3,6 +3,8 @@ package mitgliederverwaltung.Main.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -10,6 +12,10 @@ import java.util.Set;
 @Entity
 @Table(name = "members")
 public class Member {
+
+    @Transient
+    private SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -31,7 +37,7 @@ public class Member {
 
     private Date exitAt;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "adress_id")
     private Address address;
 
@@ -39,6 +45,7 @@ public class Member {
     @JoinTable(name = "member_sports", joinColumns = @JoinColumn(name = "member_id"), inverseJoinColumns = @JoinColumn(name = "sport_id"))
     @JsonIgnore
     private Set<Sport> sports = new HashSet<>();
+
 
     public Member() {
     }
@@ -83,12 +90,16 @@ public class Member {
         this.email = email;
     }
 
-    public Date getJoinedAt() {
-        return joinedAt;
+    public String getJoinedAt() {
+        // Format the Date object into the desired string
+        String formattedDate = formatter.format(joinedAt);
+        //return joinedAt;
+        return formattedDate;
+
     }
 
-    public void setJoinedAt(Date joinedAt) {
-        this.joinedAt = joinedAt;
+    public void setJoinedAt(String joinedAt) throws ParseException {
+        this.joinedAt = formatter.parse(joinedAt);
     }
 
     public Date getExitAt() {

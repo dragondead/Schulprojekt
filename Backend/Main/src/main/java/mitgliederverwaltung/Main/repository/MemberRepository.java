@@ -6,7 +6,10 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
+
 @Repository
 public interface MemberRepository extends JpaRepository<Member, Long> {
     Member findByName(String name);
+    Member findByNameAndSurnameAndJoinedAt(String name, String surname, Date joinedAt);
 }

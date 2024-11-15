@@ -1,5 +1,6 @@
 package mitgliederverwaltung.Main.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
 import mitgliederverwaltung.Main.model.Member;
 import mitgliederverwaltung.Main.repository.MemberRepository;
 import mitgliederverwaltung.Main.service.MemberService;
@@ -7,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,25 +34,33 @@ public class MemberController {
         return memberRepository.findById(id);
     }
 
+    @Operation(summary = "create a Member", description = "creates the provided Member and returns it's ID")
     @PostMapping
-    public HttpStatus create(@RequestBody Member resource) {
-        if (resource == null ) {
-            return HttpStatus.BAD_REQUEST;
+    public Long create(@RequestBody Member resource) {
+        if(resource == null) {
+            return (long) -1;
         }
         service.saveMember(resource);
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            Member temp = memberRepository.findByNameAndSurnameAndJoinedAt(resource.getName(), resource.getSurname(), formatter.parse(resource.getJoinedAt()));
+            return temp.getId();
+        } catch(ParseException e) {
+            System.out.println(e.getMessage());
+        }
 
-        return HttpStatus.CREATED;
+        return (long) -1;
     }
 
     @PutMapping(value = "/{id}")
-    public HttpStatus update(@PathVariable( "id" ) Long id, @RequestBody Member member) {
-        if (member == null ) {
+    public HttpStatus update(@PathVariable("id") Long id, @RequestBody Member member) {
+        if(member == null) {
             return HttpStatus.BAD_REQUEST;
         }
         member.setId(id);
         service.saveMember(member);
 
-        return  HttpStatus.OK;
+        return HttpStatus.OK;
     }
 
     @DeleteMapping(value = "/{id}")
