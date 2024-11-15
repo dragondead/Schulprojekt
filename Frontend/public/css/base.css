@@ -1,0 +1,248 @@
+h1 {
+	text-align: center;
+	color: #333;
+}
+
+body {
+	background-color: #fff;
+}
+
+.loginContainer {
+	position: absolute;
+	background: white;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: auto;
+	width: 400px;
+	border-radius: 10px;
+	box-shadow: 10px 10px 50px 10px grey;
+}
+
+.loginWrapper {
+	padding: 10%;
+}
+
+.loginButton {
+	width: 100%;
+	height: 40px;
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: 500;
+	border-radius: 5px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	background: #333;
+	margin-top: 20px;
+}
+
+.inputLabel {
+	margin-top: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	display: flex;
+	flex-direction: column;
+}
+
+.inputField {
+	font-size: 16px;
+	border-radius: 2px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	height: 30px;
+	width: 300px;
+	margin-bottom: 10px;
+}
+
+.viewEditMember {
+	padding: 20px;
+}
+
+.baseHeader {
+	background-color: white;
+	color: #333;
+	border-style: solid;
+	box-shadow: 10px 20px 15px silver;
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.checkBox {
+	transform: scale(1.5);
+	accent-color: red;
+}
+
+.checkBoxBorder {
+	border: 1px solid #333;
+	display: none;
+	background-color: #333;
+	position: absolute;
+}
+
+.mainView {
+	background-color: white;
+	color: #333;
+	margin: auto;
+	margin-top: 30px;
+	width: 1100px;
+	border-style: solid;
+	box-shadow: 10px 20px 15px silver;
+}
+
+.viewHeader {
+	background-color: #333;
+	color: white;
+	float: top;
+	font-size: 20px;
+	text-align: left;
+	padding: 10px 10px;
+}
+
+.viewTable {
+	display: flex;
+	justify-content: space-between;
+}
+
+.memberButton {
+	color: white;
+	background-color: #333;
+	border-radius: 5px;
+	font-size: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.memberButton:hover {
+	background-color: #111;
+}
+
+.addMember {
+	width: 95%;
+}
+
+#addMemberLine {
+	display: none;
+}
+
+#save {
+	display: none;
+}
+
+#deleteMember {
+	display: none;
+}
+
+#addMember {
+	display: none;
+}
+
+#cancelMember {
+	display: none;
+	float: right;
+	margin-right: 50px;
+}
+
+#members {
+	float: right;
+}
+
+.changeMember {
+	width: 95%;
+}
+
+#name {
+	width: 150px;
+}
+
+#surname {
+	width: 150px;
+}
+
+#address {
+	width: 300px;
+}
+
+#fee {
+	width: 50px;
+}
+
+#joinedAt, #exitAt {
+	width: 100px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th{
+	border: 1px solid #333;
+	padding: 5px;
+}
+
+tr:nth-child(even){
+	background-color: #eee;
+	}
+
+th {
+	background-color: #bbb;
+	text-align: left;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+#partnerHeader {
+	float: right;
+	padding-right: 115px;
+}
+
+.information {
+	float: left;
+}
+
+.item {
+	color: #333;
+	font-size: 20px;
+	padding: 10px;
+}
+
+.value {
+	color: #333;
+	padding-left: 30px;
+	padding-bottom: 10px;
+}
+
+.table {
+	width: 350px;
+	height: 250px;
+	overflow-y: scroll;
+}
+
+#cancel {
+	display: none;
+}
+
+.sportsButton {
+	margin-top: 40%;
+	margin-left: 30px;
+	background-color: #333;
+	color: white;
+	padding: 5px;
+	font-size: 20px;
+	border-radius: 5px;
+}
+
+.sportsButton:hover {
+	background-color: #111;
+}
+
+#addSportsmanLine {
+	display: none;
+}
+
+.inputSportsman {
+	width: 90%;
+}
